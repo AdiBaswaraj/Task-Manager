@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font Setup */
+body {
+  @apply bg-black text-white;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Smooth transitions for theme elements */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px dashed #3b82f6; /* Tailwind blue-500 */
+  outline-offset: 2px;
+}
+
+/* Form Inputs */
+input, textarea, select {
+  @apply bg-zinc-800 text-white placeholder-zinc-400 border border-zinc-600 rounded-md px-3 py-2 outline-none focus:border-blue-500;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Link Defaults */
+a {
+  @apply text-blue-400 hover:text-blue-300 underline transition;
+}
+
+/* Button Defaults */
+button {
+  font-family: inherit;
+  font-weight: 500;
+}
